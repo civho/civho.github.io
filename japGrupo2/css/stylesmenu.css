@@ -1,4 +1,4 @@
-@import url(/css/colors.css);
+@import url(colors.css);
 @media (max-width: 990px) {
 .bg-light {
     background-color: var(--card) !important;
