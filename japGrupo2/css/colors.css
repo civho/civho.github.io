@@ -1,0 +1,163 @@
+:root { 
+    color-scheme: light dark;
+    --light-bg: #E699AC;
+    --light-card: #F7D9E3;
+    --light-text: #1a1a1a;
+    --light-details: #CC5B72;
+    --light-hover: #f485dc;
+    --light-btn: #b5a8e6;
+
+    --dark-hover2: #1a1a1a;
+    --dark-bg: #121212;
+    --dark-card: #3f3f3f;
+    --dark-text: white;
+    --dark-details: #cc5c72;
+    --dark-hover: hsl(294, 93%, 21%);
+    --dark-btn: #9B2242;
+    --dark-innercard:#575757;
+
+    --background: light-dark(var(--light-bg), var(--dark-bg));
+    --card: light-dark(var(--light-card), var(--dark-card));
+    --text: light-dark(var(--light-text), var(--dark-text));
+    --hover: light-dark(var(--light-hover), var(--dark-hover));
+    --details: light-dark(var(--light-details), var(--dark-details));
+    --btn: light-dark(var(--light-btn), var(--dark-btn));
+    
+    --light-filter: drop-shadow(1px 1px 1px);
+
+    --dark-filter: brightness(0) invert(1) grayscale(1) contrast(100) drop-shadow(2px 2px 2px);
+
+    --current-filter: light-dark(var(--light-filter), var(--dark-filter));
+
+}   
+
+        /* Todo esto es darkmode */
+
+:root:has(option[value='dark']:checked) {
+     color-scheme: dark;   
+     & .form-check-input:checked {
+    background-color: var(--light-btn);
+    border-color: var(--light-btn);
+    
+     
+    } 
+
+    & body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:linear-gradient(45deg, rgba(252, 142, 197,0.5) 0%, rgba(255, 141, 211, 0.5) 25%, rgba(255, 161, 216,0.5) 50%, rgba(255, 193, 210,0.5) 75%, rgba(255, 224, 195,0.5) 100%), url(/img/1Background.jpg);;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(1) brightness(0.2);
+    pointer-events: none;
+}
+
+         & #headerimg, img[name="logo"] {
+        
+        filter: var(--dark-filter);
+
+    }
+
+    & #logojap, #eMercado {
+        filter: var(--dark-filter);
+    }
+    & header #nav-profile-pic {
+        filter: none !important;
+    }
+}
+
+:root:has(option[value='light']:checked){
+     color-scheme: light;    
+     & .form-check-input:checked {
+    background-color: var(--light-btn);
+    border-color: var(--light-btn);
+    } 
+
+    & body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(45deg, rgba(252, 142, 197,0.5) 0%, rgba(255, 141, 211, 0.5) 25%, rgba(255, 161, 216,0.5) 50%, rgba(255, 193, 210,0.5) 75%, rgba(255, 224, 195,0.5) 100%), url(/img/1Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: none;
+    pointer-events: none;
+    
+    }
+     & header img {
+        
+        filter: var(--light-filter) !important;
+
+    }
+    & #logojap, #eMercado {
+        filter: var(--light-filter) !important;
+    }
+   
+}
+
+
+
+body {
+    position: relative;
+    z-index: 0;
+    /* Remove background-image from here if you want only the pseudo-element to show it */
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(45deg, rgba(252, 142, 197,0.5) 0%, rgba(255, 141, 211, 0.5) 25%, rgba(255, 161, 216,0.5) 50%, rgba(255, 193, 210,0.5) 75%, rgba(255, 224, 195,0.5) 100%), url(/img/1Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    pointer-events: none;
+}  
+
+
+
+@media (prefers-color-scheme: dark) {
+        body::before {
+        filter: grayscale(1) brightness(0.2);
+    }
+       
+       & #headerimg, img[name="logo"] {
+        
+        filter: var( --dark-filter) !important;
+
+    }
+
+     & header #nav-profile-pic {
+        filter: none !important;
+    }
+
+    #logojap, #eMercado, #jap-emercado {
+        filter: var(--dark-filter) !important;
+    }
+
+    } 
+
+@media (prefers-color-scheme: light) {
+      & header img {
+        
+        filter: var(--light-filter) !important;
+
+    }
+     & #logojap, #eMercado {
+        filter: var(--light-filter) !important;
+    }
+   
+     #logojap, #eMercado, #jap-emercado {
+        filter: var(--light-filter) !important;
+     }
+    }
+
+    

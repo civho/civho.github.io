@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/stylesmenu.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img\favicon.ico" type="image/x-icon">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/stylesmenu.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/stylescategoria.css">
+  <link rel="stylesheet" href="/css/stylecart.css">
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg p-1 d-flex flex-row shadow-sm rounded-4 fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pb-5">
+    <div class="text-center p-4">
+      <h2 class="fw-bold mt-4">Carrito</h2>
+    </div>
+
+    <div class="row justify-content-end my-2">
+      <div class="col-md-3 col-sm-12 text-center">
+        Moneda:
+        <div class="btn d-inline-flex" id="moneda">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" checked type="radio" name="moneyRadio" id="inlineRadio1" value="UYU">
+            <label class="form-check-label" for="inlineRadio1">UYU</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="moneyRadio" id="inlineRadio2" value="USD">
+            <label class="form-check-label" for="inlineRadio2">USD</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row ">
+    <div class="col-lg-8 col-sm-12" id="container-carrito">
+        </div>
+      <div class="col-lg-4 col-sm-12">
+    <div class="card p-3 rounded-3 shadow-sm">
+      <div class="accordion mt-3" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEnvio">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnvio"
+        aria-expanded="false" aria-controls="collapseEnvio">
+        Tipo de envío
+      </button>
+    </h2>
+    <div id="collapseEnvio" class="accordion-collapse collapse" aria-labelledby="headingEnvio" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <form id="form-envio">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio" id="envio1" value="Premium" >
+            <label class="form-check-label" for="envio1" id="opcion-premium">
+              Premium 2 a 5 días (15%)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio" id="envio2" value="Express">
+            <label class="form-check-label" for="envio2" id="opcion-express">
+              Express 5 a 8 días (7%)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio" id="envio3" value="Standard" checked>
+            <label class="form-check-label" for="envio3" id="opcion-standar">
+              Standard 12 a 15 días (5%)
+            </label>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingDireccion">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDireccion"
+        aria-expanded="false" aria-controls="collapseDireccion">
+        Dirección de envío
+      </button>
+    </h2>
+    <div id="collapseDireccion" class="accordion-collapse collapse" aria-labelledby="headingDireccion" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      
+          <div class="mb-2">
+            <label for="departamento" class="form-label">Departamento</label>
+            <input type="text" class="form-control" id="departamento" placeholder="Ej: Montevideo" required>
+            <div id="" class="invalid-feedback">
+              Rellene este campo.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="localidad" class="form-label">Localidad</label>
+            <input type="text" class="form-control" id="localidad" placeholder="Ej: Cordon" required>
+             <div id="" class="invalid-feedback">
+              Rellene este campo.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="calle" class="form-label">Calle</label>
+            <input type="text" class="form-control" id="calle" placeholder="Ej: Av. Italia 1234" required>
+             <div id="" class="invalid-feedback">
+              Rellene este campo.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="numero" class="form-label">Numero</label>
+            <input type="text" class="form-control" id="numero" placeholder="Ej: 1337" required>
+             <div id="" class="invalid-feedback">
+              Rellene este campo.
+            </div>
+          </div>
+            <div class="mb-2">
+            <label for="esquina" class="form-label">Esquina</label>
+            <input type="text" class="form-control" id="esquina" placeholder="Ej: Guayabos" required>
+             <div id="" class="invalid-feedback">
+              Rellene este campo.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="card costo-card my-3">
+  <div class="card-header">
+    Costo
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <div class="fw-bold">Subtotal: <span id="subtotal" class="fw-semibold">$0</span></div>
+    </div>
+    <div class="mb-3">
+      <div class="fw-bold">Total: <span id="total" class="fw-semibold">$USD0</span></div>
+    </div>
+  </div>
+</div>
+     <div class="accordion-item">
+    <h2 class="accordion-header" id="headingPago">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePago"
+        aria-expanded="false" aria-controls="collapsePago">
+        Forma de pago
+        </button>
+    </h2>
+    <div id="collapsePago" class="accordion-collapse collapse" aria-labelledby="headingPago" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       
+          <div class="form-check" >
+            <label class="form-check-label " for="pago1" id="tarjeta">Tarjeta de crédito</label>
+            <input class="form-check-input" type="radio" name="pago" id="pago1" value="Credito" required>
+             <div id="" class="invalid-feedback">
+              Seleccione una forma de pago
+            </div>
+            
+        </div>
+        <div class="form-check" >
+          <label class="form-check-label " for="pago2" id="transferencia">Transferencia bancaria</label>
+            <input class="form-check-input" type="radio" name="pago" id="pago2" value="bancaria" required>
+             <div id="" class="invalid-feedback">
+              Seleccione una forma de pago
+            </div>
+        </div>
+       
+      </div>
+      </div>
+     </div>
+     <div>
+        <button id="buyBtn" class="btn w-100" type="submit">Comprar</button>
+    </div>
+  </form>
+  </div>
+</div>
+</div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
+      </p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>

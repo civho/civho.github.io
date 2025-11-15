@@ -1,0 +1,59 @@
+@import url(/css/colors.css);
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    height: 100vh;
+
+}
+
+
+
+.list-group {
+    background-color: var(--card) !important; 
+ }
+
+
+.list-group-item {
+    background-color: var(--card);
+    color: var(--text);
+ }
+
+ .list-group-item:hover { 
+            background-color:var(--hover) !important; /* var(--details) anteriormente*/ 
+            color: var(--text) !important;
+    } 
+    
+.btn {
+    background-color: var(--btn) !important;
+    color: var(--text) !important;
+    
+}   
+
+.btn:hover { 
+    color: var(--hover) !important;
+}
+
+.btn-link, a {
+    color: var(--dark-details);
+}
+.btn-link:hover, a:hover {
+     color: var(--hover);
+}
+
+
+h2 { 
+    
+    color:light-dark(var(--dark-text),var(--dark-details));
+    text-shadow: 2px 2px 2px black;
+}
+
+.img-fixed {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+}
+
+.form-control{
+    background-color: var(--card);
+}

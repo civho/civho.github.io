@@ -1,0 +1,82 @@
+.prod-img { 
+    max-width: 11rem !important; 
+    min-width: auto;
+    
+}
+#moneda:hover {
+    color: var(--text)!important;
+    background-color: var(--hover);
+}
+
+.form-control {
+
+    background-color: light-dark(var(--dark-text),var(--dark-text));
+    color: light-dark(var(--light-text),var(--light-text));
+} 
+
+.card {
+    background-color: var(--card);
+    color:black;
+}
+
+
+.form-check-input:checked {
+        background-color: var(--hover) !important;
+        border-color: var(--hover) !important;
+    }
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]:active, input[type=number]:focus {
+ background-color: var(--dark-innercard);
+}
+.accordion-button {
+    background-color:light-dark(var(--light-card),var(--dark-innercard));
+    color:light-dark(var(--light-text),var(--dark-text));
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color:light-dark(var(--dark-text),var(--dark-details));
+    color: light-dark(var(--light-text),var(--dark-text));
+    box-shadow: none;
+  }
+
+  .accordion-body {
+    background-color: #fdfdfd;
+  }
+
+  .accordion-item {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .accordion-header{
+    background-color: light-dark(var(--dark-text),var(--dark-innercard))
+  }
+  .costo-card {
+  background-color: light-dark(var(--dark-text), var(--dark-text));
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px;
+}
+
+.costo-card .card-header {
+  background-color: light-dark(var(--light-card), var(--dark-innercard));
+  color: light-dark(var(--light-text), var(--dark-text));;
+  border-bottom: none;
+  border: 1px solid light-dark(var(--dark-text), var(--dark-details));
+}
